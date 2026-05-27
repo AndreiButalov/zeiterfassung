@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Calender.css"
 
 const Calender = () => {
   const [viewDate, setViewDate] = useState(new Date());
@@ -83,21 +84,21 @@ const Calender = () => {
   ];
 
   return (
-    <div className="card shadow rounded-4" style={{ width: "600px", minHeight: "360px" }}>
-      <div className="card-body">
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <div className="btn-group" role="group">
-            <button className="btn btn-outline-secondary btn-sm" onClick={prevMonth}>
+    <div>
+      <div>
+        <div>
+          <div >
+            <button onClick={prevMonth}>
               ◀
             </button>
-            <button className="btn btn-outline-secondary btn-sm" onClick={nextMonth}>
+            <button onClick={nextMonth}>
               ▶
             </button>
           </div>
-          <h5 className="mb-0">
+          <h5>
             {monthNames[viewDate.getMonth()]} {viewDate.getFullYear()}
           </h5>
-          <button className="btn btn-outline-primary btn-sm" onClick={goToday}>
+          <button onClick={goToday}>
             Heute
           </button>
         </div>
@@ -106,16 +107,16 @@ const Calender = () => {
           className="d-grid"
           style={{ gridTemplateColumns: "repeat(7, 1fr)", marginTop: "40px" }}
         >
-          <div className="text-center text-muted small">Mo</div>
-          <div className="text-center text-muted small">Di</div>
-          <div className="text-center text-muted small">Mi</div>
-          <div className="text-center text-muted small">Do</div>
-          <div className="text-center text-muted small">Fr</div>
-          <div className="text-center text-muted small">Sa</div>
-          <div className="text-center text-muted small">So</div>
+          <div>Mo</div>
+          <div>Di</div>
+          <div>Mi</div>
+          <div>Do</div>
+          <div>Fr</div>
+          <div>Sa</div>
+          <div>So</div>
         </div>
 
-        <div className="d-grid gap-1 mt-2" style={{ gridTemplateColumns: "repeat(7, 1fr)" }}>
+        <div className="container" style={{ gridTemplateColumns: "repeat(7, 1fr)" }}>
           {renderDays()}
         </div>
       </div>
