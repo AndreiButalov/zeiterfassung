@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className='app'>
       {/* <Navbar /> */}
-      <div>
+      <div className='calender_contaner'>
         <Calender/>
       </div>
     </div>
