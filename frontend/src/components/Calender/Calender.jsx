@@ -74,8 +74,8 @@ const Calender = () => {
   ];
 
   return (
-    <div>
-      <div>
+    <div className="container">
+      <div className="calender_content">
         <div>
           <div >
             <button onClick={prevMonth}>
@@ -93,7 +93,7 @@ const Calender = () => {
           </button>
         </div>
 
-        <div>
+        <div className="calender_days">
           <div>Mo</div>
           <div>Di</div>
           <div>Mi</div>
@@ -103,7 +103,7 @@ const Calender = () => {
           <div>So</div>
         </div>
 
-        <div>
+        <div className="calender_days_data">
           {renderDays()}
         </div>
       </div>

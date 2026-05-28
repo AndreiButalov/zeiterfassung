@@ -1,3 +1,37 @@
 .container {
+    position: fixed;
+    inset: 0px;
+    width: 600px;
+    height: 300px;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto;
+    border: 1px black solid;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.calender_content {
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.calender_days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    width: 100%;
+}
+
+.calender_days_data {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calender_days_data button.text-muted {
+    opacity: 0.3;
+    pointer-events: none;
 }
