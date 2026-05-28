@@ -69,18 +69,8 @@ const Calender = () => {
   };
 
   const monthNames = [
-    "Januar",
-    "Februar",
-    "März",
-    "April",
-    "Mai",
-    "Juni",
-    "Juli",
-    "August",
-    "September",
-    "Oktober",
-    "November",
-    "Dezember",
+    "Januar", "Februar", "März", "April", "Mai", "Juni",
+    "Juli", "August", "September", "Oktober", "November", "Dezember",
   ];
 
   return (
@@ -103,10 +93,7 @@ const Calender = () => {
           </button>
         </div>
 
-        <div
-          className="d-grid"
-          style={{ gridTemplateColumns: "repeat(7, 1fr)", marginTop: "40px" }}
-        >
+        <div>
           <div>Mo</div>
           <div>Di</div>
           <div>Mi</div>
@@ -116,7 +103,7 @@ const Calender = () => {
           <div>So</div>
         </div>
 
-        <div className="container" style={{ gridTemplateColumns: "repeat(7, 1fr)" }}>
+        <div>
           {renderDays()}
         </div>
       </div>
