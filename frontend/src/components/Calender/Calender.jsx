@@ -88,7 +88,7 @@ const Calender = () => {
           <h5>
             {monthNames[viewDate.getMonth()]} {viewDate.getFullYear()}
           </h5>
-          <button onClick={goToday}>
+          <button className="today_button" onClick={goToday}>
             Heute
           </button>
         </div>
