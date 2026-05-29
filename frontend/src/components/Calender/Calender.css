@@ -36,11 +36,12 @@
 }
 
 .calender_days_data button, .today_button {
-    background-color: #d8dff8;
+    background-color: #f1f3fd;
     border-radius: 15px;
     padding: 5px 0;
     border: 1px #254fe6 solid;
     color: #0537ec;
+    font-weight: 700;
     cursor: pointer;
     font-size: 18px;
 }
@@ -61,4 +62,19 @@
 .today_data {
     color: red !important;
     font-weight: bold;
+    background-color: #f1f3fd;
+}
+
+.calender_days_data button.today_data {
+    background-color: #1a8be7;
+}
+
+.month_name {
+    color: #193392;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 10px;
 }

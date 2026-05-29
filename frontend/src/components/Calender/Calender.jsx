@@ -101,7 +101,7 @@ const Calender = () => {
               ▶
             </button>
           </div>
-          <h5>
+          <h5 className="month_name">
             {monthNames[viewDate.getMonth()]} {viewDate.getFullYear()}
           </h5>
           <button className="today_button" onClick={goToday}>
