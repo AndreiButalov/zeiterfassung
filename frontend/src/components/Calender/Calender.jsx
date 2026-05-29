@@ -38,35 +38,51 @@ const Calender = () => {
 //   };
 
   const renderDays = () => {
-    const month = viewDate.getMonth();
-    const start = startOfWeek(new Date(viewDate.getFullYear(), month, 1));
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+  const month = viewDate.getMonth();
+  const start = startOfWeek(new Date(viewDate.getFullYear(), month, 1));
 
-    const days = [];
-    for (let i = 0; i < 42; i++) {
-      const d = new Date(start);
-      d.setDate(start.getDate() + i);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-      let classes = "btn btn-light btn-sm";
-      if (d.getMonth() !== month) classes += " text-muted";
-      if (d.getTime() === today.getTime())
-        classes = "btn btn-primary btn-sm text-white";
-      if (selectedDate && d.toDateString() === selectedDate.toDateString())
-        classes = "btn btn-warning btn-sm text-white";
+  const days = [];
 
-      days.push(
-        <button
-          key={i}
-          className={classes}
-          onClick={() => handleDayClick(d)}
-        >
-          {d.getDate()}
-        </button>
-      );
+  for (let i = 0; i < 42; i++) {
+    const d = new Date(start);
+    d.setDate(start.getDate() + i);
+    d.setHours(0, 0, 0, 0);
+
+    let classes = "";
+
+    if (d.getMonth() !== month) {
+      classes += " text-muted";
     }
-    return days;
-  };
+
+    const isToday = d.getTime() === today.getTime();
+    if (isToday) {
+      classes += "today_data";
+    }
+
+    const isSelected =
+      selectedDate &&
+      d.toDateString() === selectedDate.toDateString();
+
+    if (isSelected) {
+      classes += " selected";
+    }
+
+    days.push(
+      <button
+        key={i}
+        className={classes.trim()}
+        onClick={() => handleDayClick(d)}
+      >
+        {d.getDate()}
+      </button>
+    );
+  }
+
+  return days;
+};
 
   const monthNames = [
     "Januar", "Februar", "März", "April", "Mai", "Juni",

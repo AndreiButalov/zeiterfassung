@@ -9,6 +9,7 @@
     border: 1px #254fe6 solid;
     border-radius: 20px;
     padding: 20px;
+    padding-bottom: 40px;
 }
 
 .calender_content {
@@ -31,7 +32,7 @@
 .calender_days_data {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
+    gap: 8px;    
 }
 
 .calender_days_data button, .today_button {
@@ -48,16 +49,16 @@
     padding: 5px 10px;
 }
 
-.today_button:hover {
-    background-color: #9baff7;
-}
-
-
-.calender_days_data button:hover {
+.calender_days_data button:hover, .today_button:hover {
     background-color: #9baff7;
 }
 
 .calender_days_data button.text-muted {
     opacity: 0.3;
     pointer-events: none;
+}
+
+.today_data {
+    color: red !important;
+    font-weight: bold;
 }
